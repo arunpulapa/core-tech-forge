@@ -12,7 +12,7 @@ export default {
         "2xl": "1400px",
       },
     },
-    extend: {
+      extend: {
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -57,6 +57,10 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      fontFamily: {
+        sans: ['Roboto', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        heading: ['Montserrat', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",

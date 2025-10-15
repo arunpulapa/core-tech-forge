@@ -24,7 +24,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Us",
-      details: ["info@itech.com", "support@itech.com"],
+      details: ["info@aknextgen.com", "support@aknextgen.com"],
     },
     {
       icon: Clock,

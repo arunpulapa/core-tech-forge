@@ -25,11 +25,11 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">iT</span>
+          <a href="/" className="flex items-center space-x-3">
+            <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center">
+              <span className="text-primary-foreground font-bold text-xl">AN</span>
             </div>
-            <span className="text-2xl font-bold text-foreground">iTech</span>
+            <span className="text-xl md:text-2xl font-bold text-foreground">Ak NextGen Solutions</span>
           </a>
 
           {/* Desktop Navigation */}
