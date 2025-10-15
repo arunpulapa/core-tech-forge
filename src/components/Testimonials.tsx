@@ -1,91 +1,111 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Star } from "lucide-react";
-import { useState } from "react";
+import { Star, Quote } from "lucide-react";
 import client1 from "@/assets/client-1.jpg";
 import client2 from "@/assets/client-2.jpg";
 import client3 from "@/assets/client-3.jpg";
 
 const Testimonials = () => {
-  const [activeSlide, setActiveSlide] = useState(0);
-
   const testimonials = [
     {
       image: client1,
-      name: "Michael Chen",
-      designation: "CTO, Tech Innovations Inc",
-      quote: "iTech transformed our infrastructure completely. Their cloud migration expertise saved us 40% in operational costs while improving system reliability.",
-      rating: 5,
+      name: "Husain Bakar",
+      role: "COO of HealthPro Systems",
+      quote:
+        "Their Secure Telemedicine Platform Transformed Patient Care, Reducing Wait Times By 40%. A True Partner In Innovation!",
     },
     {
       image: client2,
-      name: "Sarah Rodriguez",
-      designation: "CEO, Digital Solutions Corp",
-      quote: "Outstanding cybersecurity implementation. The team's proactive approach prevented multiple potential breaches and ensured our data remains secure.",
-      rating: 5,
+      name: "Lisa Gimenez",
+      role: "Director of FinEdge Group",
+      quote:
+        "Their Blockchain Solution Streamlined Our Transactions And Eliminated Fraud Risks. Exceptional Expertise And Flawless Execution!",
     },
     {
       image: client3,
-      name: "David Thompson",
-      designation: "IT Director, Global Enterprises",
-      quote: "Their custom software development exceeded expectations. The solution perfectly aligned with our business needs and delivered measurable ROI within months.",
-      rating: 5,
+      name: "Michael Roberts",
+      role: "CTO of VisionTech Global",
+      quote:
+        "An incredible experience from start to finish. The team delivered beyond expectations with precision and creativity.",
     },
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-muted/50 to-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Client Testimonials</h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Hear from our satisfied clients about their success stories
+    <section className="bg-[#050B18] text-white py-24">
+      <div className="container mx-auto px-6">
+        {/* Header */}
+        <div className="flex flex-col md:flex-row justify-between md:items-start gap-10 mb-16">
+          <div>
+            <p className="text-blue-500 font-semibold mb-4">| Testimonials</p>
+            <h2 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+              Trusted By <br /> Global Leaders.
+            </h2>
+          </div>
+          <p className="text-gray-400 text-lg max-w-xl">
+            Mauris hendrerit urna sit amet sem sagittis, eu consequat nisi
+            fermentum. Fusce dui ligula, rutrum ac felis sit amet, sollicitudin
+            accumsan justo. Suspendisse potenti.
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <Card
-                key={index}
-                className="cursor-pointer hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-fade-in"
-                style={{ animationDelay: `${index * 0.15}s` }}
-                onMouseEnter={() => setActiveSlide(index)}
-              >
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 fill-accent text-accent" />
-                    ))}
-                  </div>
-                  <p className="text-muted-foreground mb-6 italic">"{testimonial.quote}"</p>
-                  <div className="flex items-center gap-4">
-                    <img
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      className="w-16 h-16 rounded-full object-cover ring-2 ring-primary/20"
-                    />
-                    <div>
-                      <p className="font-bold text-foreground">{testimonial.name}</p>
-                      <p className="text-sm text-muted-foreground">{testimonial.designation}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+        {/* Testimonials Section */}
+        <div className="grid md:grid-cols-3 gap-8">
+          {/* Rating Card */}
+          <Card className="bg-[#0A1224] border border-gray-800 p-8 flex flex-col justify-center text-center">
+            <h3 className="text-6xl font-bold mb-2">4.9</h3>
+            <div className="flex justify-center mb-2">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="h-5 w-5 fill-blue-500 text-blue-500" />
+              ))}
+            </div>
+            <p className="text-gray-400 mb-8">( 3,700 Reviews )</p>
+            <h4 className="text-2xl font-bold mb-6 leading-tight">
+              Client Voices, <br /> Powerful Results.
+            </h4>
+            <a
+              href="#"
+              className="bg-blue-600 hover:bg-blue-700 transition-colors text-white font-semibold py-3 px-6 rounded-full w-fit mx-auto"
+            >
+              More Testimonials
+            </a>
+          </Card>
 
-          {/* Carousel Indicators */}
-          <div className="flex justify-center gap-2 mt-8">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setActiveSlide(index)}
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  activeSlide === index ? "w-8 bg-primary" : "w-2 bg-muted-foreground/30"
-                }`}
-              />
-            ))}
-          </div>
+          {/* Client Testimonials */}
+          {testimonials.map((t, index) => (
+            <Card
+              key={index}
+              className="bg-gradient-to-br from-[#081020] to-[#0E1B35] border border-gray-800 p-8 relative overflow-hidden group"
+            >
+              <CardContent className="p-0">
+                <Quote className="absolute top-6 right-6 text-blue-700 opacity-30 h-10 w-10" />
+                <div className="flex items-center mb-6 gap-4">
+                  <img
+                    src={t.image}
+                    alt={t.name}
+                    className="w-14 h-14 rounded-full object-cover border-2 border-blue-600"
+                  />
+                  <div>
+                    <p className="font-bold text-white">{t.name}</p>
+                    <p className="text-sm text-blue-400">{t.role}</p>
+                  </div>
+                </div>
+                <p className="italic text-gray-200 text-lg leading-relaxed">
+                  {t.quote}
+                </p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        {/* Carousel Dots */}
+        <div className="flex justify-center gap-2 mt-10">
+          {[0, 1, 2].map((_, i) => (
+            <span
+              key={i}
+              className={`h-2 rounded-full transition-all duration-300 ${
+                i === 0 ? "w-6 bg-blue-500" : "w-2 bg-gray-500/50"
+              }`}
+            ></span>
+          ))}
         </div>
       </div>
     </section>

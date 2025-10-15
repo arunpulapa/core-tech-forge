@@ -9,6 +9,7 @@ import FAQ from "@/components/FAQ";
 import Blog from "@/components/Blog";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import AboutSection from "@/components/About";
 
 const Index = () => {
   return (
@@ -16,10 +17,11 @@ const Index = () => {
       <Header />
       <Hero />
       <Stats />
+      <AboutSection/>
       <Services />
       <CaseStudies />
       <Testimonials />
-      <Pricing />
+      {/* <Pricing /> */}
       <FAQ />
       <Blog />
       <Contact />

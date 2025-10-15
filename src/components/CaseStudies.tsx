@@ -1,99 +1,88 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 import caseStudy1 from "@/assets/case-study-1.jpg";
 import caseStudy2 from "@/assets/case-study-2.jpg";
 import caseStudy3 from "@/assets/case-study-3.jpg";
-import caseStudy4 from "@/assets/case-study-4.jpg";
 
 const CaseStudies = () => {
   const cases = [
     {
       image: caseStudy1,
-      title: "Enterprise Digital Transformation",
-      description: "Helped a Fortune 500 company migrate to cloud infrastructure, improving efficiency by 40%.",
-      category: "Cloud Migration",
+      title: "Enhancing Supply Chain Efficiency",
+      company: "LogiChain Partners",
+      metric: "Improved Delivery Accuracy",
+      description:
+        "Inefficient inventory tracking and delayed shipments were causing client dissatisfaction and revenue loss.",
     },
     {
       image: caseStudy2,
-      title: "Global Cloud Infrastructure",
-      description: "Designed and deployed scalable cloud architecture serving 5 million+ users globally.",
-      category: "Infrastructure",
+      title: "Transforming Online Retail With AI",
+      company: "ShopSphere Inc.",
+      metric: "Increased Sales",
+      description:
+        "Low customer engagement and declining sales due to outdated systems and lack of personalized recommendations.",
     },
     {
       image: caseStudy3,
-      title: "Advanced Cybersecurity Framework",
-      description: "Implemented zero-trust security model protecting sensitive data for healthcare provider.",
-      category: "Security",
-    },
-    {
-      image: caseStudy4,
-      title: "Custom ERP Development",
-      description: "Built comprehensive enterprise resource planning system for manufacturing sector.",
-      category: "Software Development",
+      title: "Securing Healthcare Systems",
+      company: "HealthPro Systems",
+      metric: "Reduced Operational Cost",
+      description:
+        "Outdated IT infrastructure and non-compliance with data security regulations hindered operational efficiency.",
     },
   ];
 
-  const clients = ["Microsoft", "Amazon", "Google", "IBM", "Oracle", "SAP"];
-
   return (
-    <section id="case-studies" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Case Studies</h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Real-world success stories showcasing our expertise and impact
+    <section id="case-studies" className="py-20 bg-[#050B16] text-white">
+      <div className="container mx-auto px-6">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-5xl md:text-6xl font-extrabold mb-4 leading-tight">
+            Real Solutions, Real Impact.
+          </h2>
+          <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+            Mauris hendrerit urna sit amet sem sagittis, eu consequat nisi
+            fermentum. Fusce dui ligula, rutrum ac felis sit amet,
+            sollicitudinaccums justo. Suspendisse potenti.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
+        {/* Case Study Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {cases.map((item, index) => (
             <Card
               key={index}
-              className="group overflow-hidden cursor-pointer hover:shadow-2xl transition-all duration-300 animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="bg-transparent border-none text-left hover:-translate-y-2 transition-transform duration-300"
             >
-              <div className="relative overflow-hidden">
+              <div className="overflow-hidden rounded-lg">
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-64 object-cover rounded-lg transform hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6">
-                  <Button variant="secondary" size="sm" className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    View Details
-                    <ExternalLink className="ml-2 h-4 w-4" />
-                  </Button>
-                </div>
-                <div className="absolute top-4 left-4">
-                  <span className="bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-medium">
-                    {item.category}
+              </div>
+
+              <CardContent className="p-0 mt-6">
+                <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
+                <div className="flex flex-wrap items-center gap-3 text-sm text-blue-400 font-medium mb-4">
+                  <span className="flex items-center gap-1">
+                    <ExternalLink className="w-4 h-4" /> {item.company}
+                  </span>
+                  <span className="text-gray-500">|</span>
+                  <span className="flex items-center gap-1">
+                    <ExternalLink className="w-4 h-4" /> {item.metric}
                   </span>
                 </div>
-              </div>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
-                  {item.title}
-                </h3>
-                <p className="text-muted-foreground">{item.description}</p>
+                <p className="text-gray-400 mb-4">{item.description}</p>
+                <a
+                  href="#"
+                  className="text-blue-400 font-semibold flex items-center gap-2 hover:text-blue-300 transition-colors"
+                >
+                  Read More <span className="text-lg">+</span>
+                </a>
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        {/* Client Logos */}
-        <div className="text-center">
-          <h3 className="text-2xl font-bold mb-8">Trusted by Industry Leaders</h3>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-            {clients.map((client, index) => (
-              <div
-                key={index}
-                className="text-muted-foreground hover:text-primary transition-colors duration-300 font-bold text-xl opacity-60 hover:opacity-100 cursor-pointer"
-              >
-                {client}
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>

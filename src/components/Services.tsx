@@ -1,75 +1,93 @@
-import { Cloud, Shield, Code, Database, LineChart, Smartphone, Cpu, Zap } from "lucide-react";
+import {
+  Globe,
+  Smartphone,
+  Wrench,
+  Users,
+  Cpu,
+  ShieldCheck,
+} from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const Services = () => {
   const services = [
     {
-      icon: Cloud,
-      title: "Cloud Solutions",
-      description: "Scalable cloud infrastructure and migration services for seamless digital transformation.",
-    },
-    {
-      icon: Shield,
-      title: "Cybersecurity",
-      description: "Advanced security protocols to protect your business from evolving cyber threats.",
-    },
-    {
-      icon: Code,
-      title: "Custom Software Development",
-      description: "Tailored software solutions designed to meet your unique business requirements.",
-    },
-    {
-      icon: Database,
-      title: "Data Analytics",
-      description: "Transform raw data into actionable insights with our advanced analytics solutions.",
-    },
-    {
-      icon: LineChart,
-      title: "IT Consultancy",
-      description: "Expert guidance to optimize your technology stack and digital strategy.",
+      icon: Globe,
+      title: "Web Development",
+      description:
+        "Building responsive, scalable, and high-performance websites tailored to your business goals.",
     },
     {
       icon: Smartphone,
       title: "Mobile App Development",
-      description: "Native and cross-platform mobile applications that engage users.",
+      description:
+        "Crafting engaging mobile experiences through native and cross-platform solutions.",
+    },
+    {
+      icon: Wrench,
+      title: "Testing & Maintenance",
+      description:
+        "Ensuring flawless performance through continuous testing, updates, and technical support.",
+    },
+    {
+      icon: Users,
+      title: "IT Consulting",
+      description:
+        "Providing strategic technology guidance to streamline your business operations.",
     },
     {
       icon: Cpu,
-      title: "AI & Machine Learning",
-      description: "Implement intelligent automation and predictive analytics for your business.",
+      title: "AI & Automation",
+      description:
+        "Leverage machine learning and intelligent automation to enhance efficiency.",
     },
     {
-      icon: Zap,
-      title: "DevOps Services",
-      description: "Streamline development with continuous integration and deployment pipelines.",
+      icon: ShieldCheck,
+      title: "Cybersecurity & Compliance",
+      description:
+        "Protecting your data and infrastructure with top-tier security measures and monitoring.",
     },
   ];
 
   return (
-    <section id="services" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Services</h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Comprehensive IT solutions tailored to accelerate your digital transformation journey
+    <section id="services" className="bg-[#050B18] text-white py-24">
+      <div className="container mx-auto px-6">
+        {/* Header Section */}
+        <div className="text-center md:text-left max-w-3xl mb-16">
+          <p className="text-blue-500 font-semibold mb-4">| Our Services</p>
+          <h2 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+            Future-Ready <br /> IT Solutions.
+          </h2>
+          <p className="text-gray-400 text-lg">
+            Empower your business with cutting-edge digital services designed to
+            accelerate growth and innovation.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Services Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <Card
               key={index}
-              className="group cursor-pointer border-2 hover:border-primary transition-all duration-300 transform hover:scale-105 hover:shadow-xl animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="bg-[#0A1224] border border-gray-800 hover:border-blue-500 transition-all duration-300 group"
             >
-              <CardContent className="p-6 text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-primary mb-4 group-hover:animate-pulse-glow">
-                  <service.icon className="h-8 w-8 text-primary-foreground" />
+              <CardContent className="p-8">
+                <div className="flex flex-col items-start space-y-4">
+                  <div className="p-4 bg-[#081020] rounded-2xl group-hover:bg-blue-600 transition-all">
+                    <service.icon className="h-8 w-8 text-blue-400 group-hover:text-white transition-all" />
+                  </div>
+                  <h3 className="text-2xl font-bold group-hover:text-blue-400 transition-all">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-400 leading-relaxed">
+                    {service.description}
+                  </p>
+                  <a
+                    href="#"
+                    className="text-blue-500 font-semibold mt-4 inline-flex items-center group-hover:text-blue-400 transition-all"
+                  >
+                    Learn More →
+                  </a>
                 </div>
-                <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-muted-foreground">{service.description}</p>
               </CardContent>
             </Card>
           ))}

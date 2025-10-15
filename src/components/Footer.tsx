@@ -1,108 +1,104 @@
-import { Facebook, Twitter, Linkedin, Instagram, Mail } from "lucide-react";
+import { Mail, Phone, Clock, MapPin, Facebook, Twitter, Youtube } from "lucide-react";
+// import { FaFacebookF, FaXTwitter, FaYoutube } from "react-icons/fa6";
+
 
 const Footer = () => {
-  const footerSections = [
-    {
-      title: "About",
-      links: ["Company", "Team", "Careers", "Partners", "News"],
-    },
-    {
-      title: "Quick Links",
-      links: ["Home", "Services", "Case Studies", "Blog", "Contact"],
-    },
-    {
-      title: "Services",
-      links: ["Cloud Solutions", "Cybersecurity", "Development", "Consulting", "Support"],
-    },
-    {
-      title: "Resources",
-      links: ["Documentation", "Help Center", "API", "Community", "Status"],
-    },
-  ];
-
-  const socialLinks = [
-    { icon: Facebook, href: "#" },
-    { icon: Twitter, href: "#" },
-    { icon: Linkedin, href: "#" },
-    { icon: Instagram, href: "#" },
-  ];
-
   return (
-    <footer className="bg-gradient-to-br from-foreground to-foreground/95 text-background">
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
-          {/* Brand Section */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center space-x-3 mb-4">
-              <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl">AN</span>
-              </div>
-              <span className="text-xl font-bold">Ak NextGen Solutions</span>
-            </div>
-            <p className="text-background/80 mb-6">
-              Transforming businesses through innovative IT solutions. Your trusted partner in
-              digital transformation and next-generation technology.
-            </p>
-            <div className="flex items-center gap-2 mb-4">
-              <Mail className="h-5 w-5" />
-              <span className="text-background/80">info@aknextgen.com</span>
-            </div>
-            <div className="flex gap-4">
-              {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  className="w-10 h-10 rounded-full bg-background/10 hover:bg-gradient-primary flex items-center justify-center transition-all duration-300 transform hover:scale-110"
-                >
-                  <social.icon className="h-5 w-5" />
-                </a>
-              ))}
-            </div>
-          </div>
-
-          {/* Footer Links */}
-          {footerSections.map((section, index) => (
-            <div key={index}>
-              <h3 className="font-bold text-lg mb-4">{section.title}</h3>
-              <ul className="space-y-2">
-                {section.links.map((link, linkIndex) => (
-                  <li key={linkIndex}>
-                    <a
-                      href="#"
-                      className="text-background/70 hover:text-background hover:translate-x-1 inline-block transition-all duration-300"
-                    >
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="border-t border-background/20 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-background/70 text-sm">
-              Ak NextGen Solutions © 2025 All Rights Reserved.
-            </p>
-            <div className="flex gap-6 text-sm">
-              <a href="#" className="text-background/70 hover:text-background transition-colors">
-                Privacy Policy
-              </a>
-              <a href="#" className="text-background/70 hover:text-background transition-colors">
-                Terms of Service
-              </a>
-              <a href="#" className="text-background/70 hover:text-background transition-colors">
-                Cookie Policy
-              </a>
-            </div>
-            <div className="flex items-center gap-4 text-sm text-background/70">
-              <span className="px-3 py-1 bg-background/10 rounded-full">ISO 27001</span>
-              <span className="px-3 py-1 bg-background/10 rounded-full">SOC 2</span>
-            </div>
+    <footer className="bg-[#050B18] text-white pt-16 pb-6">
+      {/* Top: Newsletter */}
+      <div className="container mx-auto px-6 mb-12">
+        <div className="flex flex-col lg:flex-row justify-between items-center border-b border-white/10 pb-10 gap-6">
+          <h2 className="text-3xl font-bold">Stay Connected, Stay Informed.</h2>
+          <div className="flex w-full max-w-xl">
+            <input
+              type="email"
+              placeholder="Email"
+              className="w-full rounded-l-full px-6 py-3 text-black focus:outline-none"
+            />
+            <button className="bg-[#003cff] hover:bg-blue-700 px-6 py-3 rounded-r-full font-semibold">
+              Subscribe
+            </button>
           </div>
         </div>
+      </div>
+
+      {/* Footer Grid */}
+      <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-10">
+        {/* Logo + Social */}
+        <div>
+          <div className="flex items-center gap-2 mb-4">
+            {/* <img src="../../assets/aknextgensolutions_logo.jpg" alt="Ak NextGen Logo" className="w-8 h-8" /> */}
+            <span className="text-2xl font-bold">Ak NextGen</span>
+          </div>
+          <p className="text-gray-400 mb-6">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper.
+          </p>
+          <div className="flex gap-3">
+            <a href="#" className="border p-2 hover:bg-white/10">
+              <Facebook size={16} />
+            </a>
+            <a href="#" className="border p-2 hover:bg-white/10">
+              <Twitter size={16} />
+            </a>
+            <a href="#" className="border p-2 hover:bg-white/10">
+              <Youtube size={16} />
+            </a>
+          </div>
+        </div>
+
+        {/* Extra Links */}
+        <div>
+          <h3 className="text-xl font-semibold mb-4">Extra Links</h3>
+          <ul className="space-y-2 text-gray-300">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Case Studies</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+
+        {/* Services */}
+        <div>
+          <h3 className="text-xl font-semibold mb-4">Services</h3>
+          <ul className="space-y-2 text-gray-300">
+            <li className="flex items-center gap-2">➤ <a href="#">Custom Development</a></li>
+            <li className="flex items-center gap-2">➤ <a href="#">Cloud Solutions</a></li>
+            <li className="flex items-center gap-2">➤ <a href="#">Cybersecurity Protection</a></li>
+            <li className="flex items-center gap-2">➤ <a href="#">Infrastructure Management</a></li>
+            <li className="flex items-center gap-2">➤ <a href="#">Data Analytics</a></li>
+          </ul>
+        </div>
+
+        {/* Contact Info */}
+        <div>
+          <h3 className="text-xl font-semibold mb-4">Get In Touch</h3>
+          <ul className="space-y-4 text-gray-300 text-sm">
+            <li className="flex items-start gap-2">
+              <MapPin size={18} className="mt-0.5" />
+              <span>456 Creative District Ahmad Yani, Medan, North Sumatera</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <Mail size={18} /> hola@dominantsite.com
+            </li>
+            <li className="flex items-center gap-2">
+              <Phone size={18} /> +800-3374-4676
+            </li>
+            <li className="flex items-center gap-2">
+              <Clock size={18} /> Mon - Sat: 09:00 - 17:00
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="border-t border-white/10 pt-6 mt-6 container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
+        <div className="flex gap-6">
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Help</a>
+        </div>
+        <p className="text-center">Ak NextGen, 2024 © All Rights Reserved Dex-Theme</p>
       </div>
     </footer>
   );
