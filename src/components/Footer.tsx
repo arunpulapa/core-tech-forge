@@ -50,11 +50,11 @@ const Footer = () => {
         <div>
           <h3 className="text-xl font-semibold mb-4">Extra Links</h3>
           <ul className="space-y-2 text-gray-300">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Our Team</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Case Studies</a></li>
-            <li><a href="#">FAQ</a></li>
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#our-team">Our Team</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#case-studies">Case Studies</a></li>
+            <li><a href="#faq">FAQ</a></li>
           </ul>
         </div>
 
@@ -62,11 +62,11 @@ const Footer = () => {
         <div>
           <h3 className="text-xl font-semibold mb-4">Services</h3>
           <ul className="space-y-2 text-gray-300">
-            <li className="flex items-center gap-2">➤ <a href="#">Custom Development</a></li>
-            <li className="flex items-center gap-2">➤ <a href="#">Cloud Solutions</a></li>
-            <li className="flex items-center gap-2">➤ <a href="#">Cybersecurity Protection</a></li>
-            <li className="flex items-center gap-2">➤ <a href="#">Infrastructure Management</a></li>
-            <li className="flex items-center gap-2">➤ <a href="#">Data Analytics</a></li>
+            <li className="flex items-center gap-2">➤ <a >Custom Development</a></li>
+            <li className="flex items-center gap-2">➤ <a >Cloud Solutions</a></li>
+            <li className="flex items-center gap-2">➤ <a >Cybersecurity Protection</a></li>
+            <li className="flex items-center gap-2">➤ <a >Infrastructure Management</a></li>
+            <li className="flex items-center gap-2">➤ <a >Data Analytics</a></li>
           </ul>
         </div>
 

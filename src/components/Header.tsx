@@ -110,9 +110,19 @@ const Header = () => {
 
         {/* CTA Button */}
         <div className="hidden lg:block">
-          <Button className="bg-blue-700 hover:bg-blue-800 text-white text-lg font-semibold rounded-full px-6 py-2 shadow-lg transition-transform transform-gpu hover:-translate-y-0.5">
-            Get Started
-          </Button>
+        <Button
+  id="contactus"
+  className="bg-blue-700 hover:bg-blue-800 text-white text-lg font-semibold rounded-full px-6 py-2 shadow-lg transition-transform transform-gpu hover:-translate-y-0.5"
+  onClick={() => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  }}
+>
+  Get Started
+</Button>
+
         </div>
 
         {/* Mobile Menu Toggle */}
