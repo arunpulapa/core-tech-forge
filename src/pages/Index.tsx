@@ -9,7 +9,8 @@ import FAQ from "@/components/FAQ";
 import Blog from "@/components/Blog";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import AboutSection from "@/components/About";
+import AboutUs from "@/components/About";
+import Projects from "@/components/Projects";
 
 const Index = () => {
   return (
@@ -17,11 +18,11 @@ const Index = () => {
       <Header />
       <Hero />
       <Stats />
-      <AboutSection/>
+      <AboutUs />
       <Services />
       <CaseStudies />
       <Testimonials />
-      {/* <Pricing /> */}
+      <Projects />
       <FAQ />
       <Blog />
       <Contact />

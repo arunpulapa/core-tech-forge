@@ -1,32 +1,41 @@
-import { useState } from "react";
-import { Mail, MapPin, Phone, Facebook, Twitter, Youtube } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Mail, Phone, Facebook, Twitter, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/akn.jpg";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const menuItems = [
     "Home",
     "About Us",
     "Services",
     "Case Studies",
-    "Pages",
+    "Projects",
     "Contact",
   ];
 
+  // Add scroll listener to add shadow on scroll
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="w-full bg-[#030b17] text-white">
+    <header
+      className={`w-full bg-[#030b17] text-white sticky top-0 z-50 transition-shadow duration-300 ${
+        isScrolled ? "shadow-lg backdrop-blur-md bg-opacity-90" : ""
+      }`}
+    >
       {/* Top Info Bar */}
       <div className="border-b border-gray-800 text-sm">
         <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between py-2 px-4 space-y-2 sm:space-y-0">
           <div className="flex flex-wrap items-center space-x-6 text-gray-300">
             <span className="flex items-center space-x-2">
-              <MapPin size={15} className="text-blue-500" />
-              <span>456 Creative District Ahmad Yani, Medan</span>
-            </span>
-            <span className="flex items-center space-x-2">
               <Mail size={15} className="text-blue-500" />
-              <span>hola@dominantsite.com</span>
+              <span>aknextgensolutions@gmail.com</span>
             </span>
             <span className="flex items-center space-x-2">
               <Phone size={15} className="text-blue-500" />
@@ -52,7 +61,15 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-         <a href="/" className="flex items-center space-x-3"> <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center"> <span className="text-primary-foreground font-bold text-xl">AK</span> </div> <span className="text-xl md:text-2xl font-bold text-foreground">Ak NextGen Solutions</span> </a>
+          <a href="/" className="flex items-center space-x-3">
+            <div className="w-12 h-12 bg-gradient-to-tr from-blue-600 to-indigo-400 rounded-lg flex items-center justify-center shadow-lg">
+              <img src={logo} alt="AK NextGen Solutions" className="rounded-md"/>
+              {/* <span className="text-white font-bold text-xl">AK</span> */}
+            </div>
+            <span className="text-xl md:text-2xl font-bold text-gray-200">
+              Ak NextGen Solutions
+            </span>
+          </a>
         </div>
 
         {/* Desktop Nav */}
@@ -70,7 +87,7 @@ const Header = () => {
 
         {/* CTA Button */}
         <div className="hidden lg:block">
-          <Button className="bg-blue-700 hover:bg-blue-800 text-white text-lg font-semibold rounded-full px-8 py-2">
+          <Button className="bg-blue-700 hover:bg-blue-800 text-white text-lg font-semibold rounded-full px-8 py-2 shadow-lg transition-transform transform-gpu hover:-translate-y-0.5">
             Get Started
           </Button>
         </div>
@@ -78,7 +95,7 @@ const Header = () => {
         {/* Mobile Menu Toggle */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="lg:hidden text-white focus:outline-none"
+          className="lg:hidden text-white text-2xl focus:outline-none"
         >
           {isMobileMenuOpen ? "✕" : "☰"}
         </button>

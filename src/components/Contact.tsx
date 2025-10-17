@@ -139,7 +139,7 @@ const Contact: React.FC = () => {
             </div>
 
             {/* decorative map / icons group - mimics right column stacked card look */}
-            <div className="mt-10 grid grid-cols-1 gap-4">
+            {/* <div className="mt-10 grid grid-cols-1 gap-4">
               <div className="flex items-start gap-4 p-4 bg-[#071226]/60 rounded-md border border-slate-700">
                 <div className="p-3 rounded-full bg-gradient-to-tr from-[#163a97] to-[#0ea5d8]">
                   <MapPin size={18} color="white" />
@@ -183,7 +183,7 @@ const Contact: React.FC = () => {
                   <div className="text-slate-300 text-sm">Sat - Sun: Closed</div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div> {/* container */}
