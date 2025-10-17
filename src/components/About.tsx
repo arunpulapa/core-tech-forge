@@ -97,10 +97,10 @@ const AboutUs = () => {
             }`}
             aria-hidden
           >
-            <div className="bg-gradient-to-r from-blue-600/20 to-sky-500/20 backdrop-blur-sm px-6 py-4 rounded-xl shadow-lg border border-white/5">
+            {/* <div className="bg-gradient-to-r from-blue-600/20 to-sky-500/20 backdrop-blur-sm px-6 py-4 rounded-xl shadow-lg border border-white/5">
               <h2 className="text-4xl md:text-5xl font-extrabold text-white leading-none">{years}+</h2>
               <p className="text-blue-400 text-sm font-semibold uppercase tracking-wide">Years Experience</p>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -191,7 +191,7 @@ const AboutUs = () => {
               className="inline-block rounded-lg px-6 py-2 text-sm font-semibold bg-gradient-to-r from-blue-500 to-sky-400 text-black shadow-sm hover:brightness-105 transition"
               style={{ width: "45%", textAlign: "center" }}
             >
-              Request a pilot
+              Request a demo
             </a>
             <p className="text-sm text-gray-400 max-w-xl">
               New here? We offer short pilot engagements so you can evaluate delivery and fit before any long-term commitment.

@@ -140,14 +140,14 @@ const Testimonials = () => {
               <CardContent className="p-0">
                 <Quote className="absolute top-4 right-4 text-blue-700 opacity-30 h-8 w-8" />
                 <div className="flex items-center mb-4 gap-4">
-                  <img
+                  {/* <img
                     src={t.image}
                     alt={t.name}
                     className="w-12 h-12 rounded-full object-cover border-2 border-blue-600"
-                  />
+                  /> */}
                   <div>
                     <p className="font-bold text-white">{t.name}</p>
-                    <p className="text-sm text-blue-400">{t.role}</p>
+                    {/* <p className="text-sm text-blue-400">{t.role}</p> */}
                   </div>
                 </div>
                 <p className="italic text-gray-200 text-base leading-relaxed">{t.quote}</p>
@@ -217,14 +217,14 @@ const Testimonials = () => {
                     <Quote className="text-blue-700 opacity-20 h-8 w-8 float-right" />
 
                     <div className="flex items-center gap-4 mb-4">
-                      <img
+                      {/* <img
                         src={t.image}
                         alt={t.name}
                         className="w-14 h-14 rounded-full object-cover border-2 border-blue-600"
-                      />
+                      /> */}
                       <div>
                         <p className="font-bold text-white">{t.name}</p>
-                        <p className="text-sm text-blue-400">{t.role}</p>
+                        {/* <p className="text-sm text-blue-400">{t.role}</p> */}
                       </div>
                     </div>
 
@@ -239,7 +239,7 @@ const Testimonials = () => {
                         ))}
                       </div>
 
-                      <div className="text-xs text-gray-400">3,700 Reviews</div>
+                      {/* <div className="text-xs text-gray-400">3,700 Reviews</div> */}
                     </div>
                   </CardContent>
                 </Card>

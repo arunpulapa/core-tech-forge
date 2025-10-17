@@ -117,9 +117,9 @@ const Blog = () => {
                   </h3>
                   <p className="text-gray-400 mb-4 line-clamp-2">{post.excerpt}</p>
                   <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                    <div className="flex items-center gap-1">
+                    {/* <div className="flex items-center gap-1">
                       <User className="h-4 w-4" /> {post.author}
-                    </div>
+                    </div> */}
                     <div className="flex items-center gap-1">
                       <Calendar className="h-4 w-4" /> {post.date}
                     </div>

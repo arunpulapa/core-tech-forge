@@ -98,7 +98,7 @@ const Footer = () => {
           <a href="#">Privacy Policy</a>
           <a href="#">Help</a>
         </div>
-        <p className="text-center">Ak NextGen, 2024 © All Rights Reserved Dex-Theme</p>
+        <p className="text-center">Ak NextGen, 2024 © All Rights Reserved</p>
       </div>
     </footer>
   );
