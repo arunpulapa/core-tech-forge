@@ -75,10 +75,10 @@ const Services = () => {
                     <h3 className="text-2xl font-semibold group-hover:text-blue-400 transition-colors duration-300">{service.title}</h3>
                     <p className="text-gray-400 leading-relaxed">{service.description}</p>
                     <div className="mt-3 flex items-center justify-between w-full">
-                      <a href="#contact" className="text-blue-400 hover:text-white font-semibold inline-flex items-center gap-2">
+                      {/* <a href="#contact" className="text-blue-400 hover:text-white font-semibold inline-flex items-center gap-2">
                         Learn More →
-                      </a>
-                      <span className="text-xs px-2 py-1 rounded-md bg-white/5 text-white/90 group-hover:translate-y-[-2px] transition-transform duration-300">
+                      </a> */}
+                      <span className="text-xs px-2 py-1 rounded-md bg-white/5 text-green-500 group-hover:translate-y-[-2px] transition-transform duration-300">
                         Trusted
                       </span>
                     </div>

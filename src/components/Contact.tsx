@@ -1,20 +1,36 @@
 // Contact.tsx
 import React, { useState } from "react";
-import { MapPin, Phone, Mail, Clock, Facebook, Twitter, Youtube } from "lucide-react";
+import { Facebook, Twitter, Youtube } from "lucide-react";
 import { toast } from "sonner";
 
 const Contact: React.FC = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [service, setService] = useState("");
+  const [products, setProducts] = useState<string[]>([]);
   const [message, setMessage] = useState("");
   const [agree, setAgree] = useState(false);
 
+  const handleProductToggle = (product: string) => {
+    setProducts((prev) =>
+      prev.includes(product)
+        ? prev.filter((p) => p !== product)
+        : [...prev, product]
+    );
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // you can replace with real submission logic
     toast.success("Message sent successfully! We'll get back to you soon.");
-    setName(""); setEmail(""); setPhone(""); setMessage(""); setAgree(false);
+    console.log({ name, email, phone, service, products, message });
+    setName("");
+    setEmail("");
+    setPhone("");
+    setService("");
+    setProducts([]);
+    setMessage("");
+    setAgree(false);
   };
 
   return (
@@ -64,9 +80,55 @@ const Contact: React.FC = () => {
                 />
               </div>
 
+              {/* Service Type Dropdown */}
+              <div>
+                <label className="block text-sm text-slate-300 mb-2">Subject</label>
+                <select
+                  value={service}
+                  onChange={(e) => setService(e.target.value)}
+                  required
+                  className="w-full bg-transparent border-0 border-b border-slate-500 focus:border-slate-300 focus:outline-none py-3 text-white"
+                >
+                  <option value="" disabled className="text-slate-600 bg-[#071023]">
+                    Select a service
+                  </option>
+                  <option className="text-black">Web Development</option>
+                  <option className="text-black">Mobile Development</option>
+                  <option className="text-black">Testing & Maintenance</option>
+                  <option className="text-black">IT Consulting</option>
+                  <option className="text-black">AI & Automation</option>
+                  <option className="text-black">UI/UX Design</option>
+                  <option className="text-black">Careers</option>
+                  <option className="text-black">Others</option>
+                </select>
+              </div>
+
+              {/* Product Services */}
+              {/* <div>
+                <label className="block text-sm text-slate-300 mb-3">Our Product Services</label>
+                <div className="flex flex-wrap gap-4">
+                  {["HRM", "CRM", "Asset Management"].map((p) => (
+                    <label
+                      key={p}
+                      className="flex items-center gap-2 text-sm text-slate-300"
+                    >
+                      <input
+                        type="checkbox"
+                        checked={products.includes(p)}
+                        onChange={() => handleProductToggle(p)}
+                        className="accent-sky-600 w-4 h-4"
+                      />
+                      <span>{p}</span>
+                    </label>
+                  ))}
+                </div>
+              </div> */}
+
               {/* Message */}
               <div>
-                <label className="block text-sm text-slate-300 mb-2">How can we help you? Feel free to get in touch.</label>
+                <label className="block text-sm text-slate-300 mb-2">
+                  How can we help you? Feel free to get in touch.
+                </label>
                 <textarea
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
@@ -77,7 +139,7 @@ const Contact: React.FC = () => {
               </div>
 
               {/* Checkbox + Button row */}
-              <div className="flex items-center justify-between mt-6">
+              <div className="flex items-center justify-between mt-6 flex-wrap gap-4">
                 <label className="flex items-center gap-3 text-sm text-slate-300">
                   <input
                     type="checkbox"
@@ -91,8 +153,12 @@ const Contact: React.FC = () => {
                 <button
                   type="submit"
                   disabled={!agree}
-                  className={`ml-6 inline-flex items-center justify-center rounded-full px-7 py-3 text-white font-semibold transition-transform shadow-lg
-                    ${agree ? "bg-[#0f4bd8] hover:scale-[1.03]" : "bg-slate-700/60 cursor-not-allowed"}`}
+                  className={`ml-auto inline-flex items-center justify-center rounded-full px-7 py-3 text-white font-semibold transition-transform shadow-lg
+                    ${
+                      agree
+                        ? "bg-[#0f4bd8] hover:scale-[1.03]"
+                        : "bg-slate-700/60 cursor-not-allowed"
+                    }`}
                 >
                   Send Message
                 </button>
@@ -100,7 +166,7 @@ const Contact: React.FC = () => {
             </form>
           </div>
 
-          {/* RIGHT - Marketing + Contact Info */}
+          {/* RIGHT - Info */}
           <div className="px-4 lg:px-0">
             <div className="flex items-center gap-3 mb-6">
               <div className="h-6 w-0.5 bg-slate-600" />
@@ -119,74 +185,28 @@ const Contact: React.FC = () => {
             <h4 className="text-xl font-bold text-white mb-4">Get In Touch</h4>
 
             <div className="space-y-4 text-slate-300 mb-6">
-              <div>456 Creative District Ahmad Yani</div>
-              <div>Medan, North Sumatera</div>
-              <div className="text-white font-semibold mt-3">hola@dominantsite.com</div>
-              <div className="text-white font-bold mt-2">555-278-4364</div>
+              <div>Kukatpally 4th Phase, Hyderabad, Telangana, 500072</div>
+              <div>India</div>
+              <div className="text-white font-semibold mt-3">aknextgensolutions@gmail.com</div>
+              {/* <div className="text-white font-bold mt-2">+91 8096000442</div> */}
             </div>
 
-            {/* small social buttons */}
             <div className="flex gap-3">
               <button aria-label="facebook" className="w-10 h-10 rounded-sm border border-slate-600 flex items-center justify-center hover:bg-[#0f2b4e]">
                 <Facebook size={16} />
               </button>
-              <button aria-label="twitter" className="w-10 h-10 rounded-sm border border-slate-600 flex items-center justify-center hover:bg-[#0f2b4e]">
-                <Twitter size={16} />
+              <button aria-label="twitter"  className="w-10 h-10 rounded-sm border border-slate-600 flex items-center justify-center hover:bg-[#0f2b4e]">
+                <a href="https://x.com/AkNextgen" target="_blank" rel="noopener noreferrer">
+                  <Twitter size={16} />
+                </a>
               </button>
               <button aria-label="youtube" className="w-10 h-10 rounded-sm border border-slate-600 flex items-center justify-center hover:bg-[#0f2b4e]">
                 <Youtube size={16} />
               </button>
             </div>
-
-            {/* decorative map / icons group - mimics right column stacked card look */}
-            {/* <div className="mt-10 grid grid-cols-1 gap-4">
-              <div className="flex items-start gap-4 p-4 bg-[#071226]/60 rounded-md border border-slate-700">
-                <div className="p-3 rounded-full bg-gradient-to-tr from-[#163a97] to-[#0ea5d8]">
-                  <MapPin size={18} color="white" />
-                </div>
-                <div>
-                  <div className="font-semibold text-white">Visit Us</div>
-                  <div className="text-slate-300 text-sm">123 Technology Drive</div>
-                  <div className="text-slate-300 text-sm">Silicon Valley, CA 94025</div>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 p-4 bg-[#071226]/60 rounded-md border border-slate-700">
-                <div className="p-3 rounded-full bg-gradient-to-tr from-[#163a97] to-[#0ea5d8]">
-                  <Phone size={18} color="white" />
-                </div>
-                <div>
-                  <div className="font-semibold text-white">Call Us</div>
-                  <div className="text-slate-300 text-sm">+1 (555) 123-4567</div>
-                  <div className="text-slate-300 text-sm">+1 (555) 987-6543</div>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 p-4 bg-[#071226]/60 rounded-md border border-slate-700">
-                <div className="p-3 rounded-full bg-gradient-to-tr from-[#163a97] to-[#0ea5d8]">
-                  <Mail size={18} color="white" />
-                </div>
-                <div>
-                  <div className="font-semibold text-white">Email Us</div>
-                  <div className="text-slate-300 text-sm">info@aknextgen.com</div>
-                  <div className="text-slate-300 text-sm">support@aknextgen.com</div>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 p-4 bg-[#071226]/60 rounded-md border border-slate-700">
-                <div className="p-3 rounded-full bg-gradient-to-tr from-[#163a97] to-[#0ea5d8]">
-                  <Clock size={18} color="white" />
-                </div>
-                <div>
-                  <div className="font-semibold text-white">Business Hours</div>
-                  <div className="text-slate-300 text-sm">Mon - Fri: 9:00 AM - 6:00 PM</div>
-                  <div className="text-slate-300 text-sm">Sat - Sun: Closed</div>
-                </div>
-              </div>
-            </div> */}
           </div>
         </div>
-      </div> {/* container */}
+      </div>
     </section>
   );
 };

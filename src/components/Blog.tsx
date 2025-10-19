@@ -7,6 +7,7 @@ const Blog = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState(false);
 
+  
   const posts = [
     {
       category: "Cloud Computing",
@@ -16,6 +17,7 @@ const Blog = () => {
       author: "John Smith",
       date: "Oct 10, 2025",
       readTime: "5 min read",
+      image:"https://i.pinimg.com/736x/61/cc/d6/61ccd6392fb7bb3d7e791c5afae77aaa.jpg"
     },
     {
       category: "Cybersecurity",
@@ -25,6 +27,7 @@ const Blog = () => {
       author: "Sarah Johnson",
       date: "Oct 8, 2025",
       readTime: "7 min read",
+      image:"https://i.pinimg.com/1200x/e6/ec/86/e6ec86d140147e8dc72514dbd2af546f.jpg"
     },
     {
       category: "AI & ML",
@@ -34,6 +37,7 @@ const Blog = () => {
       author: "Michael Chen",
       date: "Oct 5, 2025",
       readTime: "6 min read",
+      image:"https://i.pinimg.com/736x/f7/8c/ef/f78cef0dd20b57db43cc6c93cc4e7303.jpg"
     },
   ];
 
@@ -104,7 +108,13 @@ const Blog = () => {
                 }
               >
                 <div className="h-48 relative overflow-hidden rounded-lg">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-600/30 to-indigo-400/20 group-hover:scale-110 transition-transform duration-500"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-600/30 to-indigo-400/20 group-hover:scale-110 transition-transform duration-500">
+                   <img
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full h-64 object-cover rounded-lg transform hover:scale-105 transition-transform duration-500"
+                  />
+                  </div>
                   <div className="absolute top-4 left-4 z-10">
                     <span className="bg-[#0A1224] text-blue-400 px-3 py-1 rounded-full text-sm font-medium shadow-sm">
                       {post.category}

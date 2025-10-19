@@ -11,7 +11,6 @@ const Header = () => {
     "Home",
     "About Us",
     "Services",
-    "Case Studies",
     "Projects",
     "Contact",
   ];
@@ -51,8 +50,8 @@ const Header = () => {
               className="flex items-center gap-2 text-gray-300 hover:text-blue-400 transition-colors whitespace-nowrap"
               aria-label="Phone"
             >
-              <Phone size={16} className="text-blue-400" />
-              <span className="text-xs sm:text-sm">+800-3374-4676</span>
+              {/* <Phone size={16} className="text-blue-400" />
+              <span className="text-xs sm:text-sm">+91 8096000442</span> */}
             </a>
           </div>
 
