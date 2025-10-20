@@ -81,9 +81,7 @@ const CaseStudies = () => {
               visible ? "animate-text-delay3" : ""
             }`}
           >
-            Mauris hendrerit urna sit amet sem sagittis, eu consequat nisi
-            fermentum. Fusce dui ligula, rutrum ac felis sit amet,
-            sollicitudin accums justo. Suspendisse potenti.
+           Our team is dedicated to providing seamless solutions, combining expertise and innovation to help your business thrive in a constantly evolving digital landscape
           </p>
         </div>
 

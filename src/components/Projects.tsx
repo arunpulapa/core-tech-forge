@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Tilt from "react-parallax-tilt"; // install with npm i react-parallax-tilt
+import housing from "@/assets/housing.png"
+import resturent from "@/assets/resturent.jpg"
+import tax from "@/assets/tax.jpg"
 
 interface Project {
   title: string;
@@ -35,7 +38,32 @@ const projects: Project[] = [
     image: "https://i.pinimg.com/1200x/ab/5b/f0/ab5bf05f7b7b9231a4460607e1e04904.jpg",
     category: "Mobile",
   },
+  {
+    title: "Housing Society App",
+    description: "Manage residents, visitors, maintenance requests, and announcements efficiently.",
+    image: housing,
+    category: "Mobile",
+  },
+  {
+    title: "Tax Management Dashboard",
+    description: "Admin dashboard for tax company to manage clients, teams, and financial reports.",
+    image: tax,
+    category: "Web",
+  },
+  {
+    title: "Icon Filers",
+    description: "A modern, responsive company website with corporate branding, services showcase, and contact integration.",
+    image: "https://i.pinimg.com/736x/7a/9e/3a/7a9e3abe745a468b32dd81c5e4cd2eb6.jpg",
+    category: "Web",
+  },
+  {
+    title: "Restaurant Management System",
+    description: "Manage orders, menus, staff, and customer feedback efficiently.",
+    image: resturent,
+    category: "Web",
+  },
 ];
+
 
 const categories = ["All", "Web", "Mobile", "AI"];
 

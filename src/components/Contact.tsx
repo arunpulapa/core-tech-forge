@@ -188,7 +188,7 @@ const Contact: React.FC = () => {
               <div>Kukatpally 4th Phase, Hyderabad, Telangana, 500072</div>
               <div>India</div>
               <div className="text-white font-semibold mt-3">aknextgensolutions@gmail.com</div>
-              {/* <div className="text-white font-bold mt-2">+91 8096000442</div> */}
+              <div className="text-white font-bold mt-2">+91 9502514857</div>
             </div>
 
             <div className="flex gap-3">

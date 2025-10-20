@@ -42,9 +42,7 @@ const FAQ = () => {
           </div>
           <div className="lg:w-1/2">
             <p className="text-gray-400 text-lg">
-              Mauris hendrerit urna sit amet sem sagittis, eu consequat nisi
-              fermentum. Fusce dui ligula, rutrum ac felis sit amet, sollicitudin
-              accumsan justo. Suspendisse potenti.
+              At AK Nextgen Solutions, we believe in powering innovation with clarity and trust. Our team is dedicated to delivering tailored technology solutions and reliable support to move your business forward. Explore answers to our most frequently asked questions below.
             </p>
           </div>
         </div>
@@ -65,7 +63,7 @@ const FAQ = () => {
                   What services does your company offer?
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-400 pt-2">
-                  Web & Mobile Development, UI/UX Design, Testing, Deployment, and IT Consulting.
+                  We offer comprehensive IT services, including web and mobile application development, UI/UX design, software testing, deployment, digital transformation consulting, and end-to-end IT support.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
@@ -73,7 +71,7 @@ const FAQ = () => {
                   Who can benefit from your services?
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-400 pt-2">
-                  Startups, enterprises, nonprofits, and everyone in between.
+                  Our services are designed for startups, SMBs, large enterprises, and nonprofit organizations seeking reliable and future-ready technology solutions tailored to their needs.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">
@@ -81,7 +79,7 @@ const FAQ = () => {
                   Do you offer customizable solutions?
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-400 pt-2">
-                  Yes, all services are tailored to your unique business needs.
+                  Absolutely. We understand that every business is unique. All our solutions are fully customizable to match your specific goals, workflow, and growth path.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -101,7 +99,7 @@ const FAQ = () => {
                   What technologies do you work with?
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-400 pt-2">
-                  React, Angular, Node.js, Python, AWS, Azure, and more.
+                  By continuously adopting modern approaches, we provide solutions that help your business stay ahead in a rapidly evolving digital landscape.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="tech-2">
@@ -109,7 +107,7 @@ const FAQ = () => {
                   Can you integrate existing systems?
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-400 pt-2">
-                  Yes, we ensure seamless integration with minimal disruption.
+                  Yes, our team specializes in integrating new solutions seamlessly with your current systems, ensuring minimal disruption to your operations and maximum business continuity.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="tech-3">
@@ -117,7 +115,7 @@ const FAQ = () => {
                   Do you provide on-site support?
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-400 pt-2">
-                  Both remote and on-site support are available.
+                  We provide both remote and on-site support, based on your requirements, to ensure you always have expert assistance when you need it most.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>

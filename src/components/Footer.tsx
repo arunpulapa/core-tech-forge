@@ -81,9 +81,9 @@ const Footer = () => {
             <li className="flex items-center gap-2">
               <Mail size={18} /> aknextgensolutions@gmail.com
             </li>
-            {/* <li className="flex items-center gap-2">
-              <Phone size={18} /> +800-3374-4676
-            </li> */}
+            <li className="flex items-center gap-2">
+              <Phone size={18} /> +91 9502514857
+            </li>
             <li className="flex items-center gap-2">
               <Clock size={18} /> Mon - Sat: 09:00 - 17:00
             </li>
