@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Facebook, Twitter, Youtube } from "lucide-react";
 import { toast } from "sonner";
 
-const API_URL = "http://127.0.0.1:8000/api/contact/"; // change if needed
+const API_URL = "https://backend.aknextgensolutions.live"; // change if needed
 
 const SuccessModal: React.FC<{
   open: boolean;
