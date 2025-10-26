@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Mail, Phone, Facebook, Twitter, Youtube } from "lucide-react";
+import { Mail, Phone, Facebook, Twitter, Youtube, Linkedin, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/akn.jpg";
 
@@ -74,9 +74,16 @@ const Header = () => {
             <a
               href="#"
               className="p-1 rounded-md text-gray-300 hover:text-blue-400 transition-colors"
-              aria-label="YouTube"
+              aria-label="Instagram"
             >
-              <Youtube size={16} />
+              <Instagram size={16} />
+            </a>
+            <a
+              href="#"
+              className="p-1 rounded-md text-gray-300 hover:text-blue-400 transition-colors"
+              aria-label="LinkedIn"
+            >
+              <Linkedin size={16} />
             </a>
           </div>
         </div>

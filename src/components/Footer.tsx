@@ -1,8 +1,25 @@
-import { Mail, Phone, Clock, MapPin, Facebook, Twitter, Youtube } from "lucide-react";
+import { Mail, Phone, Clock, MapPin, Facebook, Twitter, Youtube, Linkedin, Instagram } from "lucide-react";
+import { useState } from "react";
 // import { FaFacebookF, FaXTwitter, FaYoutube } from "react-icons/fa6";
 
 
+
+
 const Footer = () => {
+    const [email, setEmail] = useState("");
+  const [showPopup, setShowPopup] = useState(false);
+const handleSubscribe = () => {
+  if (email.trim() === "") return; // prevent empty email
+  setEmail(""); // clear input
+
+  // Show popup after 10 seconds
+  setTimeout(() => setShowPopup(true), 1000);
+
+  // Optional: hide popup after 3 seconds once it appears
+  setTimeout(() => setShowPopup(false), 10000); // 10s delay + 3s visible
+};
+
+
   return (
     <footer className="bg-[#050B18] text-white pt-16 pb-6">
       {/* Top: Newsletter */}
@@ -13,14 +30,39 @@ const Footer = () => {
             <input
               type="email"
               placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="w-full rounded-l-full px-6 py-3 text-black focus:outline-none"
             />
-            <button className="bg-[#003cff] hover:bg-blue-700 px-6 py-3 rounded-r-full font-semibold">
+            <button
+              onClick={handleSubscribe}
+              className="bg-[#003cff] hover:bg-blue-700 px-6 py-3 rounded-r-full font-semibold"
+            >
               Subscribe
             </button>
           </div>
         </div>
       </div>
+
+      {/* Your existing Footer Grid code here... */}
+
+      {/* Popup */}
+  {showPopup && (
+  <div className="fixed bottom-5 right-5 z-50">
+    <div className="relative bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-3 rounded-xl shadow-xl flex items-center gap-4 animate-slide-up-fade">
+      <span>🎉 Successfully Subscribed!</span>
+      {/* Close Button */}
+      <button
+        onClick={() => setShowPopup(false)}
+        className="ml-4 text-white hover:text-gray-200 transition-colors"
+      >
+        ✕
+      </button>
+    </div>
+  </div>
+)}
+
+
 
       {/* Footer Grid */}
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-10">
@@ -34,39 +76,57 @@ const Footer = () => {
             Empowering businesses with next-gen digital solutions that drive innovation, efficiency, and growth.
           </p>
           <div className="flex gap-3">
-            <a href="#" className="border p-2 hover:bg-white/10">
-              <Facebook size={16} />
+            <a href="#" className="border p-2 rounded hover:bg-blue-700 transition-colors">
+              <Facebook size={16} className="text-white" />
             </a>
-            <a href="#" className="border p-2 hover:bg-white/10">
-              <Twitter size={16} />
+            <a href="#" className="border p-2 rounded hover:bg-sky-500 transition-colors">
+              <Twitter size={16} className="text-white" />
             </a>
-            <a href="#" className="border p-2 hover:bg-white/10">
-              <Youtube size={16} />
+            <a href="#" className="border p-2 rounded hover:bg-[#0A66C2] transition-colors">
+              <Linkedin size={16} className="text-white" />
             </a>
+            <a href="#" className="border p-2 rounded hover:bg-[#E1306C] transition-colors">
+              <Instagram size={16} className="text-white" />
+            </a>
+            <a href="#" className="border p-2 rounded hover:bg-red-600 transition-colors">
+              <Mail size={16} className="text-white" />
+            </a>
+
           </div>
         </div>
 
         {/* Extra Links */}
         <div>
           <h3 className="text-xl font-semibold mb-4">Extra Links</h3>
-          <ul className="space-y-2 text-gray-300">
-            <li><a href="#about-us">About Us</a></li>
-            <li><a href="#our-team">Our Team</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#case-studies">Case Studies</a></li>
-            <li><a href="#faq">FAQ</a></li>
-          </ul>
+         <ul className="space-y-2 text-gray-300">
+  <li>
+    <a href="#about-us" className="hover:text-blue-400 transition-colors">About Us</a>
+  </li>
+  <li>
+    <a href="#our-team" className="hover:text-blue-400 transition-colors">Our Team</a>
+  </li>
+  <li>
+    <a href="#services" className="hover:text-blue-400 transition-colors">Services</a>
+  </li>
+  <li>
+    <a href="#case-studies" className="hover:text-blue-400 transition-colors">Case Studies</a>
+  </li>
+  <li>
+    <a href="#faq" className="hover:text-blue-400 transition-colors">FAQ</a>
+  </li>
+</ul>
+
         </div>
 
         {/* Services */}
         <div>
           <h3 className="text-xl font-semibold mb-4">Services</h3>
           <ul className="space-y-2 text-gray-300">
-            <li className="flex items-center gap-2">➤ <a >Custom Development</a></li>
-            <li className="flex items-center gap-2">➤ <a >Cloud Solutions</a></li>
-            <li className="flex items-center gap-2">➤ <a >Cybersecurity Protection</a></li>
-            <li className="flex items-center gap-2">➤ <a >Testing & Maintenance</a></li>
-            <li className="flex items-center gap-2">➤ <a >IT Consulting</a></li>
+            <li className="flex items-center gap-2 hover:text-blue-400 cursor-pointer">➤ <a >Custom Development</a></li>
+            <li className="flex items-center gap-2 hover:text-blue-400 cursor-pointer">➤ <a >Cloud Solutions</a></li>
+            <li className="flex items-center gap-2 hover:text-blue-400 cursor-pointer">➤ <a >Cybersecurity Protection</a></li>
+            <li className="flex items-center gap-2 hover:text-blue-400 cursor-pointer">➤ <a >Testing & Maintenance</a></li>
+            <li className="flex items-center gap-2 hover:text-blue-400 cursor-pointer">➤ <a >IT Consulting</a></li>
           </ul>
         </div>
 
