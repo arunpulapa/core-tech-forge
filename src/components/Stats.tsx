@@ -116,8 +116,8 @@ const Stats = () => {
   return (
     <section ref={sectionRef} className="bg-[#050B18] py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Why clients choose us</h2>
-        <p className="max-w-2xl text-sm text-muted-foreground mb-8">
+        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white pl-6">Why clients choose us</h2>
+        <p className="max-w-2xl text-sm text-muted-foreground mb-8  pl-6">
           Small, focused teams move faster and care more. We pair deep attention to your product with reliable
           communication — perfect for startups and businesses that want quality without the overhead.
         </p>
@@ -128,7 +128,7 @@ const Stats = () => {
           ))}
         </div>
 
-        <div className="mt-8 flex items-center justify-between gap-4 flex-wrap">
+        {/* <div className="mt-8 flex items-center justify-between gap-4 flex-wrap">
           <p className="text-sm text-muted-foreground/80">
             New here? We offer a short pilot engagement so you can evaluate delivery and fit before committing.
           </p>
@@ -138,7 +138,7 @@ const Stats = () => {
           >
             Request a pilot
           </a>
-        </div>
+        </div> */}
       </div>
 
       <style >{`

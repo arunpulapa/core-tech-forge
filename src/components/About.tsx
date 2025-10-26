@@ -5,8 +5,8 @@ const AboutUs = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const progress = {
-    itSupport: 86,
-    itSecurity: 94,
+    itSupport: 94,
+    itSecurity: 86,
     cloudSupport: 90,
   };
 
@@ -106,7 +106,7 @@ const AboutUs = () => {
 
         {/* Right Side - Text Content */}
         <div
-          className={`lg:pl-16 transform transition-all duration-1000 ${
+          className={`transform transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           } mt-20 md:mt-0`}
         >

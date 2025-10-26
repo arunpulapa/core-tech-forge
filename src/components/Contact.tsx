@@ -287,7 +287,7 @@ const Contact: React.FC = () => {
             </h3>
 
             <p className="text-slate-300 max-w-lg mb-8">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+              Transforming ideas into intelligent, scalable, and secure digital experiences.
             </p>
 
             <h4 className="text-xl font-bold text-white mb-4">Get In Touch</h4>

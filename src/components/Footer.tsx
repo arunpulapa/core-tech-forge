@@ -31,7 +31,7 @@ const Footer = () => {
             <span className="text-2xl font-bold">Ak NextGen</span>
           </div>
           <p className="text-gray-400 mb-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper.
+            Empowering businesses with next-gen digital solutions that drive innovation, efficiency, and growth.
           </p>
           <div className="flex gap-3">
             <a href="#" className="border p-2 hover:bg-white/10">
@@ -65,8 +65,8 @@ const Footer = () => {
             <li className="flex items-center gap-2">➤ <a >Custom Development</a></li>
             <li className="flex items-center gap-2">➤ <a >Cloud Solutions</a></li>
             <li className="flex items-center gap-2">➤ <a >Cybersecurity Protection</a></li>
-            <li className="flex items-center gap-2">➤ <a >Infrastructure Management</a></li>
-            <li className="flex items-center gap-2">➤ <a >Data Analytics</a></li>
+            <li className="flex items-center gap-2">➤ <a >Testing & Maintenance</a></li>
+            <li className="flex items-center gap-2">➤ <a >IT Consulting</a></li>
           </ul>
         </div>
 
@@ -85,7 +85,7 @@ const Footer = () => {
               <Phone size={18} /> +91 9502514857
             </li>
             <li className="flex items-center gap-2">
-              <Clock size={18} /> Mon - Sat: 09:00 - 17:00
+              <Clock size={18} /> Mon - Sat: 09:00 - 19:00
             </li>
           </ul>
         </div>

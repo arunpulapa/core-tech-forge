@@ -9,26 +9,27 @@ import client3 from "@/assets/client-3.jpg";
 const Testimonials = () => {
   const testimonials = [
     {
-      image: client1,
-      name: "Husain Bakar",
-      role: "COO of HealthPro Systems",
-      quote:
-        "Their Secure Telemedicine Platform Transformed Patient Care, Reducing Wait Times By 40%. A True Partner In Innovation!",
-    },
-    {
-      image: client2,
-      name: "Lisa Gimenez",
-      role: "Director of FinEdge Group",
-      quote:
-        "Their Blockchain Solution Streamlined Our Transactions And Eliminated Fraud Risks. Exceptional Expertise And Flawless Execution!",
-    },
-    {
-      image: client3,
-      name: "Michael Roberts",
-      role: "CTO of VisionTech Global",
-      quote:
-        "An incredible experience from start to finish. The team delivered beyond expectations with precision and creativity.",
-    },
+  image: client1,
+  name: "Vijay Varikuti",
+  role: "Founder, Sri Venkateswara Traders – Hyderabad",
+  quote:
+    "Ak NextGen built our company website with a sleek and modern design. Our clients now find it easier to explore our services online, and the site loads lightning fast. Excellent work by the team!",
+},
+{
+  image: client2,
+  name: "Venkatesh Naidu",
+  role: "Managing Partner, TaxEase Consultants – Vijayawada",
+  quote:
+    "The custom dashboard developed by Ak NextGen completely transformed how we handle client tax filings. Everything from reports to analytics is now centralized and effortless to track. A big productivity boost for our firm!",
+},
+{
+  image: client3,
+  name: "Ravi Teja",
+  role: "Director, Sai InfraTech Solutions – Guntur",
+  quote:
+    "Their CRM app helped us manage leads, clients, and follow-ups in one place. Our sales team works more efficiently, and communication with customers has become much smoother. Highly recommend Ak NextGen!",
+},
+
   ];
 
   // duplicate for seamless looping
