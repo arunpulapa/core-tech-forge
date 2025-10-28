@@ -42,7 +42,7 @@ const FAQ = () => {
           </div>
           <div className="lg:w-1/2">
             <p className="text-gray-400 text-lg">
-              At AK Nextgen Solutions, we believe in powering innovation with clarity and trust. Our team is dedicated to delivering tailored technology solutions and reliable support to move your business forward. Explore answers to our most frequently asked questions below.
+              At Innovation Bytes, we believe in powering innovation with clarity and trust. Our team is dedicated to delivering tailored technology solutions and reliable support to move your business forward. Explore answers to our most frequently asked questions below.
             </p>
           </div>
         </div>

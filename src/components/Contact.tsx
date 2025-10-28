@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Facebook, Twitter, Youtube } from "lucide-react";
 import { toast } from "sonner";
 
-const API_URL = "https://backend.aknextgensolutions.live"; // change if needed
+const API_URL = "https://backend.Innovation Bytes.live"; // change if needed
 
 const SuccessModal: React.FC<{
   open: boolean;
@@ -295,7 +295,7 @@ const Contact: React.FC = () => {
             <div className="space-y-4 text-slate-300 mb-6">
               <div>Kukatpally 4th Phase, Hyderabad, Telangana, 500072</div>
               <div>India</div>
-              <div className="text-white font-semibold mt-3">aknextgensolutions@gmail.com</div>
+              <div className="text-white font-semibold mt-3">Innovationbytes@gmail.com</div>
               <div className="text-white font-bold mt-2">+91 9502514857</div>
             </div>
 

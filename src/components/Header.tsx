@@ -37,12 +37,12 @@ const Header = () => {
           {/* Left: email + phone */}
           <div className="flex items-center gap-6 flex-wrap">
             <a
-              href="mailto:aknextgensolutions@gmail.com"
+              href="mailto:Innovationbytes@gmail.com"
               className="flex items-center gap-2 text-gray-300 hover:text-blue-400 transition-colors whitespace-nowrap"
               aria-label="Email"
             >
               <Mail size={16} className="text-blue-400" />
-              <span className="text-xs sm:text-sm">aknextgensolutions@gmail.com</span>
+              <span className="text-xs sm:text-sm">Innovationbytes@gmail.com</span>
             </a>
 
             <a
@@ -95,9 +95,9 @@ const Header = () => {
         <div className="flex items-center space-x-3">
           <a href="/" className="flex items-center gap-3">
             <div className="w-12 h-12 bg-gradient-to-tr from-blue-600 to-indigo-400 rounded-lg flex items-center justify-center shadow-lg overflow-hidden">
-              <img src={logo} alt="AK NextGen Solutions" className="w-full h-full object-cover rounded-md" />
+              <img src={logo} alt="Innovation Bytes" className="w-full h-full object-cover rounded-md" />
             </div>
-            <span className="text-xl md:text-2xl font-bold text-gray-200">Ak NextGen Solutions</span>
+            <span className="text-xl md:text-2xl font-bold text-gray-200">Innovation Bytes</span>
           </a>
         </div>
 
@@ -175,8 +175,8 @@ const Header = () => {
 
             {/* Mobile social + contact row */}
             {/* <div className="w-full flex flex-col gap-3 mt-6 border-t border-gray-800 pt-4">
-              <a href="mailto:aknextgensolutions@gmail.com" className="text-gray-300 hover:text-blue-400 text-sm flex items-center gap-2 justify-center">
-                <Mail size={14} /> <span>aknextgensolutions@gmail.com</span>
+              <a href="mailto:Innovationbytes@gmail.com" className="text-gray-300 hover:text-blue-400 text-sm flex items-center gap-2 justify-center">
+                <Mail size={14} /> <span>Innovationbytes@gmail.com</span>
               </a>
               <a href="tel:+80033744676" className="text-gray-300 hover:text-blue-400 text-sm flex items-center gap-2 justify-center">
                 <Phone size={14} /> <span>+800-3374-4676</span>

@@ -66,14 +66,12 @@ const handleSubscribe = () => {
 
       {/* Footer Grid */}
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-10">
-        {/* Logo + Social */}
         <div>
-          <div className="flex items-center gap-2 mb-4">
-            {/* <img src="../../assets/aknextgensolutions_logo.jpg" alt="Ak NextGen Logo" className="w-8 h-8" /> */}
-            <span className="text-2xl font-bold">Ak NextGen</span>
+          <div className="flex items-center gap-2 mb-4">       
+            <span className="text-2xl font-bold">Innovation Bytes</span>
           </div>
           <p className="text-gray-400 mb-6">
-            Empowering businesses with next-gen digital solutions that drive innovation, efficiency, and growth.
+            Empowering businesses with Next-gen digital solutions that drive innovation, efficiency, and growth.
           </p>
           <div className="flex gap-3">
             <a href="#" className="border p-2 rounded hover:bg-blue-700 transition-colors">
@@ -139,7 +137,7 @@ const handleSubscribe = () => {
               <span>Kukatpally 4th Phase, Hyderabad, Telangana, 500072</span>
             </li>
             <li className="flex items-center gap-2">
-              <Mail size={18} /> aknextgensolutions@gmail.com
+              <Mail size={18} /> Innovationbytes@gmail.com
             </li>
             <li className="flex items-center gap-2">
               <Phone size={18} /> +91 9502514857
@@ -158,7 +156,7 @@ const handleSubscribe = () => {
           <a href="#">Privacy Policy</a>
           <a href="#">Help</a>
         </div>
-        <p className="text-center">Ak NextGen, 2024 © All Rights Reserved</p>
+        <p className="text-center">Innovation Bytes, 2024 © All Rights Reserved</p>
       </div>
     </footer>
   );
