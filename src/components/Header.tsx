@@ -24,24 +24,23 @@ const Header = () => {
 
   return (
     <header
-      className={`w-full sticky top-0 z-50 transition-shadow duration-300 ${
-        isScrolled ? "shadow-lg backdrop-blur-md bg-opacity-90" : ""
+      className={`w-full sticky top-0 z-50 transition-all duration-300 ${
+        isScrolled ? "glass animate-glow" : "bg-background/80 backdrop-blur-sm"
       }`}
-      style={{ backgroundColor: "#030b17" }}
     >
       {/* Top Info Bar
           NOTE: when mobile menu opens we hide this on small screens to avoid duplicate contacts.
       */}
-      <div className={`border-b border-gray-800 text-sm ${isMobileMenuOpen ? "hidden sm:block" : "block"}`}>
+      <div className={`border-b border-border/50 text-sm ${isMobileMenuOpen ? "hidden sm:block" : "block"}`}>
         <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between py-2 px-4 gap-3">
           {/* Left: email + phone */}
           <div className="flex items-center gap-6 flex-wrap">
             <a
               href="mailto:Innovationbytes@gmail.com"
-              className="flex items-center gap-2 text-gray-300 hover:text-blue-400 transition-colors whitespace-nowrap"
+              className="flex items-center gap-2 text-muted-foreground hover:text-secondary transition-colors whitespace-nowrap"
               aria-label="Email"
             >
-              <Mail size={16} className="text-blue-400" />
+              <Mail size={16} className="text-secondary" />
               <span className="text-xs sm:text-sm">Innovationbytes@gmail.com</span>
             </a>
 
@@ -59,7 +58,7 @@ const Header = () => {
           <div className="flex items-center gap-3">
             <a
               href="#"
-              className="p-1 rounded-md text-gray-300 hover:text-blue-400 transition-colors"
+              className="p-1 rounded-md text-muted-foreground hover:text-primary hover:animate-pulse-glow transition-all"
               aria-label="Facebook"
             >
               <Facebook size={16} />
