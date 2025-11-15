@@ -116,16 +116,16 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="bg-[#050B18] text-white py-24">
+    <section className="bg-section-bg text-foreground py-24 gradient-mesh">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between md:items-start gap-10 mb-12">
           <div>
-            <p className="text-blue-500 font-semibold mb-4">| Testimonials</p>
+            <p className="neon-text-secondary font-semibold mb-4">| Testimonials</p>
             <h2 className="text-4xl md:text-5xl font-extrabold leading-tight mb-3">
-              Trusted By <br /> Global Leaders.
+              Trusted By <br /> <span className="neon-text-primary">Global Leaders</span>.
             </h2>
-            <p className="text-gray-400 max-w-xl hidden md:block">
+            <p className="text-muted-foreground max-w-xl hidden md:block">
               Real client success stories that showcase measurable impact and long-term partnership.
             </p>
           </div>
@@ -139,18 +139,18 @@ const Testimonials = () => {
 
         {/* Small screens (stacked) */}
         <div className="md:hidden grid grid-cols-1 gap-8">
-          <Card className="bg-[#0A1224] border border-gray-800 p-6 flex flex-col justify-center text-center">
-            <h3 className="text-4xl md:text-6xl font-bold mb-2">4.9</h3>
+          <Card className="glass-card neon-border-secondary p-6 flex flex-col justify-center text-center">
+            <h3 className="text-4xl md:text-6xl font-bold mb-2 neon-text-primary">4.9</h3>
             <div className="flex justify-center mb-2">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="h-5 w-5 fill-blue-500 text-blue-500" />
+                <Star key={i} className="h-5 w-5 fill-accent text-accent" />
               ))}
             </div>
-            <p className="text-gray-400 mb-6">( 3,700 Reviews )</p>
+            <p className="text-muted-foreground mb-6">( 3,700 Reviews )</p>
             <h4 className="text-xl font-bold mb-4 leading-tight">Client Voices, Powerful Results.</h4>
             <a
               href="#"
-              className="bg-blue-600 hover:bg-blue-700 transition-colors text-white font-semibold py-2 px-4 rounded-full w-fit mx-auto"
+              className="gradient-primary neon-border-primary hover:scale-105 transition-all text-white font-semibold py-2 px-4 rounded-full w-fit mx-auto"
             >
               More Testimonials
             </a>
@@ -159,16 +159,16 @@ const Testimonials = () => {
           {testimonials.map((t, index) => (
             <Card
               key={index}
-              className="bg-gradient-to-br from-[#081020] to-[#0E1B35] border border-gray-800 p-6 relative overflow-hidden group"
+              className="glass-card neon-border-secondary hover:neon-border-primary p-6 relative overflow-hidden group"
             >
               <CardContent className="p-0">
-                <Quote className="absolute top-4 right-4 text-blue-700 opacity-30 h-8 w-8" />
+                <Quote className="absolute top-4 right-4 text-primary/30 opacity-30 h-8 w-8 group-hover:opacity-60 transition-opacity" />
                 <div className="flex items-center mb-4 gap-4">
                   <div>
-                    <p className="font-bold text-white">{t.name}</p>
+                    <p className="font-bold">{t.name}</p>
                   </div>
                 </div>
-                <p className="italic text-gray-200 text-base leading-relaxed">{t.quote}</p>
+                <p className="italic text-muted-foreground text-base leading-relaxed">{t.quote}</p>
               </CardContent>
             </Card>
           ))}
@@ -228,7 +228,7 @@ const Testimonials = () => {
               }}
             >
               {items.map((t, i) => (
-                <motion.div
+                 <motion.div
                   key={`${t.name}-${i}`}
                   className="testimonial-card min-w-[320px] max-w-[360px] flex-shrink-0"
                   initial={{ opacity: 0, y: 12 }}
@@ -236,24 +236,24 @@ const Testimonials = () => {
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.45, delay: (i % testimonials.length) * 0.06 }}
                 >
-                  <Card className="bg-gradient-to-br from-[#081020] to-[#0E1B35] border border-gray-800 p-6 h-full shadow-2xl">
+                  <Card className="glass-card neon-border-secondary hover:neon-border-primary p-6 h-full shadow-2xl group">
                     <CardContent className="p-0">
-                      <Quote className="text-blue-700 opacity-20 h-8 w-8 float-right" />
+                      <Quote className="text-primary/30 opacity-20 h-8 w-8 float-right group-hover:opacity-50 transition-opacity" />
 
                       <div className="flex items-center gap-4 mb-4">
                         <div>
-                          <p className="font-bold text-white">{t.name}</p>
+                          <p className="font-bold">{t.name}</p>
                         </div>
                       </div>
 
-                      <p className="italic text-gray-200 text-sm leading-relaxed mb-4 h-[72px] overflow-hidden">
+                      <p className="italic text-muted-foreground text-sm leading-relaxed mb-4 h-[72px] overflow-hidden">
                         "{t.quote}"
                       </p>
 
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-1">
                           {[...Array(5)].map((_, s) => (
-                            <Star key={s} className="h-4 w-4 fill-blue-500 text-blue-500" />
+                            <Star key={s} className="h-4 w-4 fill-accent text-accent" />
                           ))}
                         </div>
                       </div>
@@ -265,8 +265,8 @@ const Testimonials = () => {
           </div>
 
           {/* subtle left/right gradient hint */}
-          <div className="pointer-events-none absolute top-0 left-[320px] h-full w-16 bg-gradient-to-r from-[#050B18] to-transparent" />
-          <div className="pointer-events-none absolute top-0 right-0 h-full w-16 bg-gradient-to-l from-[#050B18] to-transparent" />
+          <div className="pointer-events-none absolute top-0 left-[320px] h-full w-16 bg-gradient-to-r from-background to-transparent" />
+          <div className="pointer-events-none absolute top-0 right-0 h-full w-16 bg-gradient-to-l from-background to-transparent" />
         </div>
       </div>
     </section>
