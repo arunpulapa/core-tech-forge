@@ -35,16 +35,16 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="relative bg-[#050B18] text-white py-24 overflow-hidden"
+      className="relative bg-section-bg text-foreground py-24 overflow-hidden gradient-mesh"
       ref={containerRef}
     >
       <div className="container mx-auto px-6">
         <div className="text-center md:text-left max-w-3xl mb-12 mx-auto md:mx-0">
-          <p className="text-blue-500 font-semibold mb-4">| Our Services</p>
+          <p className="neon-text-secondary font-semibold mb-4">| Our Services</p>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">
-            Future-Ready <br /> IT Solutions.
+            Future-Ready <br /> <span className="neon-text-primary">IT Solutions</span>.
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto md:mx-0">
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto md:mx-0">
             Empower your business with cutting-edge digital services designed to accelerate growth and innovation.
           </p>
         </div>
@@ -57,7 +57,7 @@ const Services = () => {
             return (
               <Card
                 key={service.title}
-                className={`bg-[#0A1224] border border-gray-800 transform transition-all duration-500 opacity-0`}
+                className={`glass-card neon-border-secondary hover:neon-border-primary transform transition-all duration-500 opacity-0 hover:scale-105 group`}
                 style={
                   visible
                     ? {
@@ -69,11 +69,11 @@ const Services = () => {
               >
                 <CardContent className="p-6">
                   <div className="flex flex-col items-start space-y-4">
-                    <div className="p-3 rounded-2xl bg-[#081020] group-hover:bg-gradient-to-tr group-hover:from-blue-600 group-hover:to-sky-400 transition-all duration-400">
-                      <Icon className="h-7 w-7 text-blue-400 group-hover:text-white transition-all duration-300" />
+                    <div className="p-3 rounded-2xl bg-muted/50 group-hover:gradient-primary group-hover:animate-glow transition-all duration-400">
+                      <Icon className="h-7 w-7 text-secondary group-hover:text-white transition-all duration-300" />
                     </div>
-                    <h3 className="text-2xl font-semibold group-hover:text-blue-400 transition-colors duration-300">{service.title}</h3>
-                    <p className="text-gray-400 leading-relaxed">{service.description}</p>
+                    <h3 className="text-2xl font-semibold group-hover:neon-text-primary transition-colors duration-300">{service.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{service.description}</p>
                     <div className="mt-3 flex items-center justify-between w-full">
                       {/* <a href="#contact" className="text-blue-400 hover:text-white font-semibold inline-flex items-center gap-2">
                         Learn More →

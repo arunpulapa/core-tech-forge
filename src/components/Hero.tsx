@@ -36,7 +36,7 @@ const Hero = () => {
       />
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/40 to-background/95 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background pointer-events-none gradient-mesh" />
 
       {/* Hero Content */}
       <div className="container relative z-10 px-6">
@@ -49,7 +49,7 @@ const Hero = () => {
               } text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight`}
             >
               Future-Proof{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">
+              <span className="neon-text-primary">
                 Your Business
               </span>.
             </h1>
@@ -57,7 +57,7 @@ const Hero = () => {
             <p
               className={`fade-slide ${
                 mounted ? "show delay-3" : ""
-              } text-gray-300 text-lg md:text-xl max-w-2xl`}
+              } text-muted-foreground text-lg md:text-xl max-w-2xl`}
             >
               We build secure, scalable software that powers growth — from AI-driven
               automation to resilient cloud platforms. Partner with a team that ships
@@ -71,7 +71,7 @@ const Hero = () => {
             >
               <Button
                 size="lg"
-                className="bg-[#003cff] hover:bg-[#002db3] px-6 py-3 text-lg rounded-full shadow-lg transform-gpu hover:-translate-y-0.5 transition"
+                className="gradient-primary neon-border-primary px-8 py-6 text-lg rounded-full shadow-2xl hover:scale-105 animate-pulse-glow transition-all duration-300"
                 aria-label="Contact us"
               >
                 Contact Us
