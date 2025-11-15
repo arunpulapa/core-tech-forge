@@ -21,7 +21,7 @@ const handleSubscribe = () => {
 
 
   return (
-    <footer className="bg-[#050B18] text-white pt-16 pb-6">
+    <footer className="bg-[hsl(var(--footer-bg))] text-[hsl(var(--footer-foreground))] pt-16 pb-6">
       {/* Top: Newsletter */}
       <div className="container mx-auto px-6 mb-12">
         <div className="flex flex-col lg:flex-row justify-between items-center border-b border-white/10 pb-10 gap-6">

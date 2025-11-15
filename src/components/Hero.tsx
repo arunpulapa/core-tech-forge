@@ -36,7 +36,7 @@ const Hero = () => {
       />
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#050B18]/80 via-[#050B18]/50 to-[#050B18]/90 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/40 to-background/95 pointer-events-none" />
 
       {/* Hero Content */}
       <div className="container relative z-10 px-6">

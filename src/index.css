@@ -8,40 +8,42 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 215 25% 27%;
+    --background: 210 40% 98%;
+    --foreground: 215 25% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 27%;
+    --card-foreground: 215 25% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 27%;
+    --popover-foreground: 215 25% 20%;
 
-    --primary: 211 100% 34%;
+    --primary: 211 100% 50%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 193 100% 50%;
-    --secondary-foreground: 215 25% 27%;
+    --secondary: 193 100% 60%;
+    --secondary-foreground: 215 25% 15%;
 
-    --accent: 33 100% 50%;
+    --accent: 33 100% 55%;
     --accent-foreground: 0 0% 100%;
 
-    --muted: 210 17% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 210 40% 95%;
+    --muted-foreground: 215 16% 40%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 211 100% 34%;
+    --border: 214 32% 88%;
+    --input: 214 32% 90%;
+    --ring: 211 100% 50%;
 
     --radius: 0.5rem;
 
     /* Custom IT theme colors */
-    --tech-gradient-start: 211 100% 34%;
-    --tech-gradient-end: 193 100% 50%;
-    --section-bg: 210 17% 98%;
+    --tech-gradient-start: 211 100% 50%;
+    --tech-gradient-end: 193 100% 60%;
+    --section-bg: 210 40% 96%;
+    --footer-bg: 211 100% 25%;
+    --footer-foreground: 0 0% 98%;
     
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
@@ -61,35 +63,37 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 215 25% 10%;
+    --background: 215 30% 16%;
     --foreground: 0 0% 98%;
 
-    --card: 215 25% 12%;
+    --card: 215 30% 18%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 215 25% 12%;
+    --popover: 215 30% 18%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 193 100% 50%;
-    --primary-foreground: 215 25% 10%;
+    --primary: 193 100% 60%;
+    --primary-foreground: 215 30% 16%;
 
-    --secondary: 211 100% 34%;
+    --secondary: 211 100% 50%;
     --secondary-foreground: 0 0% 100%;
 
-    --accent: 33 100% 50%;
+    --accent: 33 100% 60%;
     --accent-foreground: 0 0% 100%;
 
-    --muted: 215 25% 20%;
-    --muted-foreground: 215 16% 65%;
+    --muted: 215 25% 25%;
+    --muted-foreground: 215 16% 70%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 62.8% 50.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 215 25% 20%;
-    --input: 215 25% 20%;
-    --ring: 193 100% 50%;
+    --border: 215 25% 28%;
+    --input: 215 25% 25%;
+    --ring: 193 100% 60%;
 
-    --section-bg: 215 25% 12%;
+    --section-bg: 215 30% 18%;
+    --footer-bg: 215 35% 12%;
+    --footer-foreground: 0 0% 95%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
