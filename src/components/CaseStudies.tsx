@@ -56,14 +56,14 @@ const CaseStudies = () => {
   return (
     <section
       id="case-studies"
-      className="py-20 bg-[#050B16] text-white overflow-hidden"
+      className="py-20 bg-section-bg text-foreground overflow-hidden gradient-mesh"
       ref={containerRef}
     >
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
           <p
-            className={`text-blue-500 font-semibold mb-4 transform opacity-0 translate-y-6 transition-all duration-700 ${
+            className={`neon-text-secondary font-semibold mb-4 transform opacity-0 translate-y-6 transition-all duration-700 ${
               visible ? "animate-text-delay1" : ""
             }`}
           >
@@ -74,10 +74,10 @@ const CaseStudies = () => {
               visible ? "animate-text-delay2" : ""
             }`}
           >
-            Real Solutions, <br /> Real Impact.
+            Real Solutions, <br /> <span className="neon-text-primary">Real Impact</span>.
           </h2>
           <p
-            className={`text-gray-400 text-lg max-w-3xl mx-auto transform opacity-0 translate-y-6 transition-all duration-700 ${
+            className={`text-muted-foreground text-lg max-w-3xl mx-auto transform opacity-0 translate-y-6 transition-all duration-700 ${
               visible ? "animate-text-delay3" : ""
             }`}
           >
@@ -93,7 +93,7 @@ const CaseStudies = () => {
             return (
               <Card
                 key={index}
-                className={`bg-transparent border-none text-left transform opacity-0 translate-y-10 transition-all duration-700`}
+                className={`glass-card neon-border-secondary hover:neon-border-primary border-none text-left transform opacity-0 translate-y-10 transition-all duration-700 group`}
                 style={
                   visible
                     ? {
@@ -107,25 +107,25 @@ const CaseStudies = () => {
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-64 object-cover rounded-lg transform hover:scale-105 transition-transform duration-500"
+                    className="w-full h-64 object-cover rounded-lg transform group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
 
                 <CardContent className="p-0 mt-6">
-                  <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
-                  <div className="flex flex-wrap items-center gap-3 text-sm text-blue-400 font-medium mb-4">
+                  <h3 className="text-2xl font-bold mb-2 group-hover:neon-text-primary transition-colors">{item.title}</h3>
+                  <div className="flex flex-wrap items-center gap-3 text-sm text-secondary font-medium mb-4">
                     <span className="flex items-center gap-1">
                       <ExternalLink className="w-4 h-4" /> {item.company}
                     </span>
-                    <span className="text-gray-500">|</span>
-                    <span className="flex items-center gap-1">
+                    <span className="text-muted-foreground">|</span>
+                    <span className="flex items-center gap-1 text-accent">
                       <ExternalLink className="w-4 h-4" /> {item.metric}
                     </span>
                   </div>
-                  <p className="text-gray-400 mb-4">{item.description}</p>
+                  <p className="text-muted-foreground mb-4">{item.description}</p>
                   <a
                     href="#"
-                    className="text-blue-400 font-semibold flex items-center gap-2 hover:text-blue-300 transition-colors"
+                    className="text-secondary font-semibold flex items-center gap-2 hover:text-primary transition-colors group-hover:animate-pulse-glow"
                   >
                     Read More <span className="text-lg">+</span>
                   </a>

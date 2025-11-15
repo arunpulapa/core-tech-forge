@@ -57,7 +57,7 @@ const AboutUs = () => {
     <section
       ref={sectionRef}
       id="about-us"
-      className="relative bg-[#030b17] text-white py-20 overflow-hidden"
+      className="relative bg-section-bg text-foreground py-20 overflow-hidden gradient-mesh"
       aria-labelledby="about-heading"
     >
       <div className="container mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-12 items-center">
@@ -72,7 +72,7 @@ const AboutUs = () => {
             <img
               src="https://i.pinimg.com/736x/02/61/96/026196c12bf94ebae9533c5d06e20bfe.jpg"
               alt="Tech Experts"
-              className="rounded-md w-full h-[400px] md:h-[520px] object-cover shadow-2xl hover:scale-105 transition-transform duration-700"
+              className="rounded-md w-full h-[400px] md:h-[520px] object-cover shadow-2xl hover:scale-105 transition-transform duration-700 neon-border-secondary"
             />
           </div>
 
@@ -86,7 +86,7 @@ const AboutUs = () => {
             <img
               src="https://i.pinimg.com/736x/21/ce/96/21ce960479fc576304613e852c7d4f59.jpg"
               alt="Team Working"
-              className="rounded-md w-[200px] md:w-[260px] h-[150px] md:h-[200px] object-cover border-4 border-[#030b17] shadow-lg hover:scale-105 transition-transform duration-700"
+              className="rounded-md w-[200px] md:w-[260px] h-[150px] md:h-[200px] object-cover border-4 border-background shadow-lg hover:scale-105 transition-transform duration-700 neon-border-primary"
             />
           </div>
 
@@ -110,11 +110,11 @@ const AboutUs = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           } mt-20 md:mt-0`}
         >
-          <p className="text-blue-500 font-medium mb-2" >| About Us</p>
+          <p className="neon-text-secondary font-medium mb-2" >| About Us</p>
           <h2 id="about-heading" className="text-3xl md:text-5xl font-extrabold leading-tight mb-4">
-            Experts In Tech <br /> Evolution.
+            Experts In <span className="neon-text-primary">Tech Evolution</span>.
           </h2>
-          <p className="text-gray-300 mb-6 text-lg leading-relaxed">
+          <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
             As an IT Solution and Services Company, we deliver practical, reliable solutions that prioritize your
             satisfaction and growth.
           </p>
@@ -122,25 +122,25 @@ const AboutUs = () => {
           {/* small cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
             <div
-              className={`p-4 rounded-xl bg-gradient-to-br from-white/2 to-white/3 border border-white/6 shadow-sm transform transition-all duration-700 ${
+              className={`p-4 rounded-xl glass neon-border-secondary transform transition-all duration-700 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
             >
-              <h3 className="text-lg font-bold text-white mb-1">Innovation & Adaptability</h3>
-              <p className="text-gray-400 text-sm">Continuous innovation to keep your product future-ready.</p>
+              <h3 className="text-lg font-bold mb-1">Innovation & Adaptability</h3>
+              <p className="text-muted-foreground text-sm">Continuous innovation to keep your product future-ready.</p>
             </div>
 
             <div
-              className={`p-4 rounded-xl bg-gradient-to-br from-white/2 to-white/3 border border-white/6 shadow-sm transform transition-all duration-700 ${
+              className={`p-4 rounded-xl glass neon-border-secondary transform transition-all duration-700 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
             >
-              <h3 className="text-lg font-bold text-white mb-1">Customer-Centric Excellence</h3>
-              <p className="text-gray-400 text-sm">We place your needs first — clear communication, dependable delivery.</p>
+              <h3 className="text-lg font-bold mb-1">Customer-Centric Excellence</h3>
+              <p className="text-muted-foreground text-sm">We place your needs first — clear communication, dependable delivery.</p>
             </div>
           </div>
 
-          <p className="text-gray-300 mb-6">
+          <p className="text-muted-foreground mb-6">
             We prefer quality over quantity. Small, dedicated teams mean better attention to detail and faster iteration.
           </p>
 
@@ -149,34 +149,28 @@ const AboutUs = () => {
             {Object.entries(progress).map(([key, value], idx) => (
               <div
                 key={key}
-                className={`p-4 rounded-lg bg-[#061025] border border-white/6 transform transition-all duration-1000 ${
+                className={`p-4 rounded-lg glass-card neon-border-secondary transform transition-all duration-1000 ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
                 }`}
                 style={{ transitionDelay: `${idx * 200}ms` }}
               >
                 <div className="flex justify-between mb-2">
-                  <span className="font-semibold text-white">
+                  <span className="font-semibold">
                     {key === "itSupport"
                       ? "Software Development"
                       : key === "itSecurity"
                       ? "IT Security"
                       : "Cloud Support"}
                   </span>
-                  <span className="text-blue-400 font-semibold" aria-live="polite">
+                  <span className="text-secondary font-semibold" aria-live="polite">
                     {isVisible ? `${value}%` : "0%"}
                   </span>
                 </div>
-                <div className="w-full bg-gray-800 h-3 rounded-full overflow-hidden">
+                <div className="w-full bg-muted/30 h-3 rounded-full overflow-hidden">
                   <div
-                    className="h-3 rounded-full transition-all ease-out duration-1500"
+                    className="h-3 rounded-full transition-all ease-out duration-1500 gradient-primary"
                     style={{
                       width: isVisible ? `${value}%` : "0%",
-                      background:
-                        key === "itSupport"
-                          ? "linear-gradient(90deg,#2563eb,#06b6d4)"
-                          : key === "itSecurity"
-                          ? "linear-gradient(90deg,#0ea5e9,#7c3aed)"
-                          : "linear-gradient(90deg,#10b981,#06b6d4)",
                     }}
                   />
                 </div>
@@ -188,12 +182,12 @@ const AboutUs = () => {
           <div className="mt-8 flex flex-col md:flex-row items-center gap-4">
             <a
               href="#contact"
-              className="inline-block rounded-lg px-6 py-2 text-sm font-semibold bg-gradient-to-r from-blue-500 to-sky-400 text-black shadow-sm hover:brightness-105 transition"
+              className="inline-block rounded-lg px-6 py-2 text-sm font-semibold gradient-primary neon-border-primary shadow-2xl hover:scale-105 transition-all"
               style={{ width: "45%", textAlign: "center" }}
             >
               Request a demo
             </a>
-            <p className="text-sm text-gray-400 max-w-xl">
+            <p className="text-sm text-muted-foreground max-w-xl">
               New here? We offer short pilot engagements so you can evaluate delivery and fit before any long-term commitment.
             </p>
           </div>

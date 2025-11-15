@@ -76,11 +76,11 @@ const Projects = () => {
       : projects.filter((p) => p.category === selectedCategory);
 
   return (
-    <section id="projects" className="py-24 bg-[#050b18] text-white">
+    <section id="projects" className="py-24 bg-section-bg text-foreground gradient-mesh">
       <div className="container mx-auto px-6 lg:px-12">
-        <p className="text-blue-500 font-medium mb-2 tracking-wider">| Our Projects</p>
-        <h2 className="text-3xl md:text-5xl font-extrabold mb-12 text-white">
-          Recent Works & Innovations
+        <p className="neon-text-secondary font-medium mb-2 tracking-wider">| Our Projects</p>
+        <h2 className="text-3xl md:text-5xl font-extrabold mb-12">
+          Recent Works & <span className="neon-text-primary">Innovations</span>
         </h2>
 
         {/* Category Filters */}
@@ -91,14 +91,14 @@ const Projects = () => {
               onClick={() => setSelectedCategory(cat)}
               className={`px-6 py-2 rounded-full font-semibold text-sm md:text-base relative transition-all duration-300 ${
                 selectedCategory === cat
-                  ? "text-white bg-gradient-to-r from-blue-500 to-indigo-500 shadow-lg"
-                  : "text-gray-400 bg-gray-800 hover:text-white hover:bg-blue-600"
+                  ? "gradient-primary neon-border-primary shadow-2xl"
+                  : "glass hover:neon-border-secondary"
               }`}
               whileHover={{ scale: 1.05 }}
             >
               {cat}
               {selectedCategory === cat && (
-                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-6 h-1 bg-white rounded-full"></span>
+                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-6 h-1 bg-white rounded-full animate-pulse-glow"></span>
               )}
             </motion.button>
           ))}
@@ -119,27 +119,27 @@ const Projects = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.7, delay: idx * 0.15 }}
-                className="relative rounded-2xl overflow-hidden shadow-2xl cursor-pointer group border-2 border-transparent hover:border-gradient-to-r hover:from-blue-500 hover:to-indigo-500 transition-all"
+                className="glass-card neon-border-secondary hover:neon-border-primary relative overflow-hidden shadow-2xl cursor-pointer group border-2 transition-all"
               >
                 <motion.img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-72 object-cover rounded-2xl transform transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-72 object-cover rounded-2xl transform transition-transform duration-500 group-hover:scale-110 neon-border-secondary"
                 />
 
                 {/* Overlay */}
                 <motion.div
-                  className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center p-6 rounded-2xl backdrop-blur-sm"
+                  className="absolute inset-0 bg-background/90 backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center p-6 rounded-2xl"
                 >
-                  <span className="text-xs uppercase text-blue-400 font-semibold mb-2">
+                  <span className="text-xs uppercase text-secondary font-semibold mb-2">
                     {project.category}
                   </span>
-                  <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
-                  <p className="text-gray-300 text-sm">{project.description}</p>
+                  <h3 className="text-2xl font-bold mb-2 neon-text-primary">{project.title}</h3>
+                  <p className="text-muted-foreground text-sm">{project.description}</p>
                   {project.link && (
                     <a
                       href={project.link}
-                      className="mt-4 px-4 py-2 bg-blue-500 rounded-full text-white font-semibold hover:bg-indigo-500 transition"
+                      className="mt-4 px-4 py-2 gradient-primary neon-border-primary rounded-full font-semibold hover:scale-105 transition-all"
                     >
                       View Project
                     </a>
@@ -153,7 +153,7 @@ const Projects = () => {
         {/* See More Button */}
         <div className="mt-12 text-center">
           <motion.button
-            className="px-8 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold rounded-full shadow-lg hover:scale-105 transition-transform duration-300"
+            className="px-8 py-3 gradient-primary neon-border-primary font-semibold rounded-full shadow-2xl hover:scale-105 transition-all duration-300 animate-pulse-glow"
             whileHover={{ scale: 1.05 }}
           >
             See More Projects
