@@ -111,7 +111,7 @@ const CaseStudies = () => {
                   />
                 </div>
 
-                <CardContent className="p-0 mt-6">
+                <CardContent className="p-2 mt-6">
                   <h3 className="text-2xl font-bold mb-2 group-hover:neon-text-primary transition-colors">{item.title}</h3>
                   <div className="flex flex-wrap items-center gap-3 text-sm text-secondary font-medium mb-4">
                     <span className="flex items-center gap-1">
